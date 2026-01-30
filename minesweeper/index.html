@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sweepr</title>
+<style>
+:root{
+	--bg:#030303;
+	--panel:#111214;
+	--border:#27292d;
+	--text:#f7f7f7;
+	--accent:#8ee0aa;
+}
+
+*{
+	box-sizing:border-box;
+	user-select:none;
+	-webkit-user-select:none;
+}
+
+body{
+	margin:0;
+	min-height:100vh;
+	background:var(--bg);
+	color:var(--text);
+	font-family:"segoe ui",system-ui,sans-serif;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.wrap{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	gap:1.2rem;
+}
+
+.panel{
+	background:var(--panel);
+	border:1px solid var(--border);
+	border-radius:0.8rem;
+	padding:1.5rem 2rem;
+	display:flex;
+	flex-direction:column;
+	gap:0.75rem;
+	min-width:180px;
+}
+
+.btn{
+	background:transparent;
+	border:1px solid var(--border);
+	border-radius:0.5rem;
+	color:var(--text);
+	padding:0.6rem 1rem;
+	font-size:1.1rem;
+	letter-spacing:0.15em;
+	cursor:pointer;
+}
+
+.btn:hover{
+	border-color:var(--accent);
+	color:var(--accent);
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+	<div class="panel">
+		<button class="btn" id="l4">l4</button>
+		<button class="btn" id="l5">l5</button>
+	</div>
+</div>
+
+<script>
+document.getElementById("l4").onclick=()=>location.href="/l4"
+document.getElementById("l5").onclick=()=>location.href="/l5"
+</script>
+</body>
+</html>
